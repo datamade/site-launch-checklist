@@ -14,12 +14,16 @@ Some examples:
 
 ## Google Analytics
 
-1. Create [Google Analytics](http://www.google.com/analytics/) account
-2. Hook up the GA Tracking Code (typically in our `analytics_lib.js` file)
-3. Set up relevant Goals and Funnels
-4. Set up [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en)
-5. Verify site in Webmaster Tools with DNS TXT record
-5. Link Webmaster Tools to Google Analytics
+Copy the following into your projects repo's issues as something like "Tracking"
+
+```
+* [ ] Create [Google Analytics](http://www.google.com/analytics/) account
+* [ ] Hook up the GA Tracking Code (typically in our `analytics_lib.js` file)
+* [ ] Set up relevant Goals and Funnels
+* [ ] Set up [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en)
+* [ ] Verify site in Webmaster Tools with DNS TXT record
+* [ ] Link Webmaster Tools to Google Analytics
+```
 
 ## Sharing & Rich Snippets
 
