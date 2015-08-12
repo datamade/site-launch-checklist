@@ -45,6 +45,14 @@ Some examples:
  * <meta name=“twitter:image:src”>
 - [ ] Create 2-5 meme images using [Canva](http://canva.com/) or a similar tool
 
+## Mobile Friendliness
+
+Test on various mobile devices:
+- [ ] scrolling is easy
+- [ ] nav bar works
+- [ ] hoverable things are tappable
+- [ ] charts/maps look ok
+
 ## Outreach
 
 - [ ] Write up press release
