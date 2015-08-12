@@ -25,11 +25,24 @@ Some examples:
 
 ## Sharing & Rich Snippets
 
-- [ ] Set up Twitter, Facebook and general meta tags with
- * title
- * URL
- * description
- * image
+- [ ] Set up general meta tags
+ * <meta name=“description”>
+ * <meta name=“author”>
+- [ ] Set up Facebook meta tags & validate [here](https://developers.facebook.com/tools/debug/)
+ * <meta property=“og:site_name”>
+ * <meta property=“og:title”>
+ * <meta property=“og:type”>
+ * <meta property=“og:description”>
+ * <meta property=“og:url”>
+ * <meta property=“og:image”>
+- [ ] Set up Twitter meta tags & validate [here](https://cards-dev.twitter.com/validator)
+ * <meta name=“twitter:card”>
+ * <meta name=“twitter:site”>
+ * <meta name=“twitter:creator”>
+ * <meta name=“twitter:description”> (note that this needs to be under 200 characters)
+ * <meta name=“twitter:title”>
+ * <meta name=“twitter:url”>
+ * <meta name=“twitter:image:src”>
 - [ ] Create 2-5 meme images using [Canva](http://canva.com/) or a similar tool
 
 ## Outreach
