@@ -27,17 +27,25 @@ Copy the following into your projects repo's issues as something like "Tracking"
 
 ## Sharing & Rich Snippets
 
-1. Set up Twitter, Facebook and general meta tags with
+Copy the following into your project's repo issues as an issue like "Sharing"
+
+```
+- [ ] Set up Twitter, Facebook and general meta tags with
  * title
  * URL
  * description
  * image
-2. Create 2-5 meme images using [Canva](http://canva.com/) or a similar tool
+- [ ] Create 2-5 meme images using [Canva](http://canva.com/) or a similar tool
+```
 
 ## Outreach
 
-1. Write up press release
-2. Identify who will be the primary person of contact and make their info prominent on the website and all PR
-2. Identify relevant media contacts to email
-3. Identify relevant social news sites (reddit, listservs, slack channels)
-4. Divide & conquer - send out the media blitz!
+Copy the following into your project's repo issues as an issue like "Outreach"
+
+```
+- [ ] Write up press release
+- [ ] Identify who will be the primary person of contact and make their info prominent on the website and all PR
+- [ ] Identify relevant media contacts to email
+- [ ] Identify relevant social news sites (reddit, listservs, slack channels)
+- [ ] Divide & conquer - send out the media blitz!
+```
