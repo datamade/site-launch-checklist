@@ -1,7 +1,7 @@
 # DataMade Site Launch Checklist
 A checklist of miscellaneous tasks to do before launching a public website. 
 
-## How to use this
+## Usage
 Make a new GitHub issue in your project called "Final Checklist" and copy/paste the following:
 
 
