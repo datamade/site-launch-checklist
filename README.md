@@ -53,6 +53,32 @@ Test on various mobile devices:
 - [ ] hoverable things are tappable
 - [ ] charts/maps look ok
 
+## Load Testing
+
+If your site relies on a database or server-side code, it should use caching and be load tested. If it's a static HTML or Jekyll site, you can skip this section.
+
+- [ ] set up page [caching](https://en.wikipedia.org/wiki/Web_cache)
+- [ ] write a script to load test all your pages. [Here's a good example from Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/cache_builder.py)
+
+## Readme
+
+If the site is open source, make sure the Readme.md is complete and accurate. 
+
+Here's a few good examples:
+
+- [Geomancer](https://github.com/associatedpress/geomancer/blob/master/README.md)
+- [Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/README.md)
+
+The Readme should have the following sections:
+
+- [ ] Overview
+- [ ] Setup
+- [ ] Running locally
+- [ ] Team
+- [ ] Errors / Bugs 
+- [ ] Pull Requests
+- [ ] Copyright and License
+
 ## Outreach
 
 - [ ] Write up press release
