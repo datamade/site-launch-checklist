@@ -56,6 +56,11 @@ Test on various mobile devices:
 - [ ] hoverable things are tappable
 - [ ] charts/maps look ok
 
+Using localtunnel to test a site running locally:
+1. `npm install -g localtunnel`
+2. `lt --port 5000` (or replace 5000 w/ whatever port you're using)
+3. navigate to the url that localtunnel gives you
+
 ## Load Testing
 
 If your site relies on a database or server-side code, it should use caching and be load tested. If it's a static HTML or Jekyll site, you can skip this section.
