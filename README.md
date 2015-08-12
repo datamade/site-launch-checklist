@@ -1,5 +1,5 @@
 # DataMade Site Launch Checklist
-A checklist of miscellaneous tasks to do before launching a public website. To use this, make an issue in your project's issues called "Final Checklist" and copy and past the following:
+A checklist of miscellaneous tasks to do before launching a public website. To use this, make an issue in your project's issues called "Final Checklist" and copy/paste the following:
 
 
 ```
