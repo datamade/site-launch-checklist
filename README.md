@@ -17,6 +17,10 @@ Some examples:
 * Donate to a particular organization
 * Create a Tumblr for people to share interesting findings (if it's a data access site)
 
+## Web Search Indexing
+* [ ] If you have a staging site, tell the search engine robots not to index you with a robots.txt
+* [ ] Make sure you allow indexing when you are ready to launch.
+
 ## Google Analytics
 
 * [ ] Create [Google Analytics](http://www.google.com/analytics/) account
