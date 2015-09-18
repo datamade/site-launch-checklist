@@ -65,6 +65,10 @@ Using localtunnel to test a site running locally:
 2. `lt --port 5000` (or replace 5000 w/ whatever port you're using)
 3. navigate to the url that localtunnel gives you
 
+## Miscellaneous Polish
+- [ ] add favicon
+- [ ] add 404 & 500 error pages
+
 ## Load Testing
 
 If your site relies on a database or server-side code, it should use caching and be load tested. If it's a static HTML or Jekyll site, you can skip this section.
@@ -72,7 +76,7 @@ If your site relies on a database or server-side code, it should use caching and
 - [ ] set up page [caching](https://en.wikipedia.org/wiki/Web_cache)
 - [ ] write a script to load test all your pages. [Here's a good example from Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/cache_builder.py)
 
-## Readme
+## GitHub Readme
 
 If the site is open source, make sure the Readme.md is complete and accurate. 
 
