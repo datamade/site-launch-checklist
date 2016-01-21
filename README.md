@@ -60,10 +60,8 @@ Test on various mobile devices:
 - [ ] hoverable things are tappable
 - [ ] charts/maps look ok
 
-Using localtunnel to test a site running locally:
-1. `npm install -g localtunnel`
-2. `lt --port 5000` (or replace 5000 w/ whatever port you're using)
-3. navigate to the url that localtunnel gives you
+## Page Speed
+- [ ] run the site through https://developers.google.com/speed/pagespeed/insights/
 
 ## Miscellaneous Polish
 - [ ] add favicon
