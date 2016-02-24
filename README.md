@@ -64,7 +64,7 @@ Test on various mobile devices:
 - [ ] run the site through https://developers.google.com/speed/pagespeed/insights/
 
 ## Miscellaneous Polish
-- [ ] add favicon
+- [ ] add favicons, apple touch icons (http://www.favicomatic.com/)
 - [ ] add 404 & 500 error pages
 
 ## Load Testing
