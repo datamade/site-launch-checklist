@@ -74,6 +74,10 @@ If your site relies on a database or server-side code, it should use caching and
 - [ ] set up page [caching](https://en.wikipedia.org/wiki/Web_cache)
 - [ ] write a script to load test all your pages. [Here's a good example from Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/cache_builder.py)
 
+## Testing
+
+- [ ] Plan for a day of bugfixing. This day should happen after you have added the last features you plan on adding.
+
 ## GitHub Readme
 
 If the site is open source, make sure the Readme.md is complete and accurate. 
