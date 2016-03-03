@@ -6,6 +6,8 @@ Make a new GitHub issue in your project called "Final Checklist" and copy/paste 
 
 
 ```
+from the [DataMade Site Launch Checklist](https://github.com/datamade/site-launch-checklist)
+
 ## Framing / Call to Action
 - [ ] Make sure that the site has a clear call to action. This should not be 'hey look at this cool tool'. Rather, it should be a way for someone to engage in a meaningful way on the issue being presented.
 
