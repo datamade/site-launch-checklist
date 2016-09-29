@@ -21,7 +21,8 @@ Some examples:
 
 ## Web Search Indexing
 * [ ] If you have a staging site, tell the search engine robots not to index you with a robots.txt
-* [ ] Make sure you allow indexing when you are ready to launch.
+* [ ] Make sure you allow indexing when you are ready to launch
+* [ ] Make sure you handle the www subdomain with DNS redirect
 
 ## Google Analytics
 
