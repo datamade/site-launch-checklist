@@ -108,3 +108,11 @@ The Readme should have the following sections:
 - [ ] Identify relevant social news sites (reddit, listservs, slack channels)
 - [ ] Divide & conquer - send out the media blitz!
 ```
+
+## Suggestions? 
+
+We'd love to hear 'em. [Open an issue](https://github.com/datamade/site-launch-checklist/issues), or fork this repo and make it your own! 
+
+## Copyright and Attribution
+
+Copyright (c) 2016 DataMade. Released under [MIT License](https://github.com/datamade/site-launch-checklist/blob/master/LICENSE).
