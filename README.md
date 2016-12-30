@@ -69,6 +69,7 @@ Test on various mobile devices:
 ## Miscellaneous Polish
 - [ ] add favicons, apple touch icons (http://www.favicomatic.com/)
 - [ ] add 404 & 500 error pages
+- [ ] setup HTTPS with [Let's Encrypt](https://letsencrypt.org/) or some other means.
 
 ## Load Testing
 
