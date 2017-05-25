@@ -63,6 +63,17 @@ Test on various mobile devices:
 - [ ] hoverable things are tappable
 - [ ] charts/maps look ok
 
+## Printer Friendliness
+
+Dynamic sizing, dark backgrounds, and interactivity don't play well with printers. 
+
+Pick one: 
+- [ ] Make a print stylesheet using a `@media print {}` media query, then add it to your site with `<link rel="stylesheet" type="text/css" href="css/print.css" media="print">`
+- or -
+- [ ] Use Firefox dev tools to remove offending elements (like sticky footers), alter colors where needed, and screenshot the entire page (here's how: https://stackoverflow.com/a/14830242).
+- [ ] Slice the resulting PNG into a multi-page PDF by copy/pasting page-sized chunks into the rich text editor of your choice, i.e. Microsoft Word or Google Docs. Export it to PDF and add it to the directory your images are stored in.
+- [ ] Add a link to the printer-friendly version to your website.
+
 ## Page Speed
 - [ ] run the site through https://developers.google.com/speed/pagespeed/insights/
 
