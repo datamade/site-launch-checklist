@@ -1,130 +1,126 @@
-# DataMade Site Launch Checklist
-A checklist of miscellaneous tasks to do before launching a public website. 
+# 🚀 DataMade Site Launch Checklist
+_A checklist of tasks to do before launching a public website._
 
 ## Usage
-Make a new GitHub issue in your project called "Final Checklist" and copy/paste the following:
+Launch preparation generally takes a day or more. You should also reserve a day for bugfixing after you have wrapped the last feature. Be sure to plan accordingly!
 
+Once you're ready, make a new GitHub issue in your project called "Launch Checklist" and copy/paste the following:
 
 ```
-from the [DataMade Site Launch Checklist](https://github.com/datamade/site-launch-checklist)
+From the [DataMade Site Launch Checklist](https://github.com/datamade/site-launch-checklist)
 
-## Framing / Call to Action
-- [ ] Make sure that the site has a clear call to action. This should not be 'hey look at this cool tool'. Rather, it should be a way for someone to engage in a meaningful way on the issue being presented.
+## Load Testing and Website Optimization
 
-Some examples:
+If your site relies on a database or server-side code, you should load test and optimize the site for the level of traffic you anticipate. If you're launching a static site, you can skip this section.
 
-* Join a mailing list (which means you need to create one)
-* Attend an event
-* Share on Facebook/Twitter
-* Donate to a particular organization
-* Create a Tumblr for people to share interesting findings (if it's a data access site)
+* [ ] Set up [caching](https://docs.djangoproject.com/en/stable/topics/cache/)
+* [ ] Run the site through Google's [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+* [ ] Write a script to load test your site
+    - We like [Locust](https://docs.locust.io/en/stable/) for this. See [LA Metro Councilmatic](https://github.com/datamade/la-metro-councilmatic#load-testing) for a basic example.
+
+If you're writing a Django application, [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/) is a great tool for identifying duplicated and/or sluggish queries.
+
+## Deployment and DNS
+
+* [ ] Create a production deployment
+* [ ] Double check that production-level resources have been provisioned
+* [ ] Purchase your domain and create the DNS record to point it at your production deployment
+* [ ] Set up SSL
 
 ## Web Search Indexing
-* [ ] If you have a staging site, tell the search engine robots not to index you with a robots.txt
-* [ ] Make sure you allow indexing when you are ready to launch
-* [ ] Make sure you handle the www subdomain with DNS redirect
+
+* [ ] Disallow indexing of your staging site
+* [ ] Allow indexing of your production site
+* [ ] Redirect the www subdomain to your root domain
+* [ ] [Set a canonical URL](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls) to prevent duplicate search results
 
 ## Google Analytics
 
-* [ ] Create [Google Analytics](http://www.google.com/analytics/) account
-* [ ] Hook up the GA Tracking Code (typically in our `analytics_lib.js` file)
-* [ ] Set up relevant Goals and Funnels
-* [ ] Set up [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en)
-* [ ] Verify site in Webmaster Tools with DNS TXT record
+* [ ] Create a [Google Analytics](http://www.google.com/analytics/) account
+* [ ] Add [the Google Analytics script](https://developers.google.com/analytics/devguides/collection/analyticsjs) to your site
+* [ ] Set up [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en) and [verify site](https://support.google.com/webmasters/answer/9008080?hl=en)
 * [ ] Link Webmaster Tools to Google Analytics
+* [ ] Optional: Set up relevant Goals and Funnels in Google Analytics
 
 ## Sharing & Rich Snippets
 
-- [ ] Set up general meta tags
- * `<meta name="description">`
- * `<meta name="author">`
-- [ ] Set up Facebook meta tags & validate [here](https://developers.facebook.com/tools/debug/)
- * `<meta property="og:site_name">`
- * `<meta property="og:title">`
- * `<meta property="og:type">`
- * `<meta property="og:description">`
- * `<meta property="og:url">`
- * `<meta property="og:image">`
-- [ ] Set up Twitter meta tags & validate [here](https://cards-dev.twitter.com/validator)
- * `<meta name="twitter:card">`
- * `<meta name="twitter:site">`
- * `<meta name="twitter:creator">`
- * `<meta name="twitter:description">` (note that this needs to be under 200 characters)
- * `<meta name="twitter:title">`
- * `<meta name="twitter:url">`
- * `<meta name="twitter:image:src">`
-- [ ] Create 2-5 meme images using [Canva](http://canva.com/) or a similar tool
+* [ ] Create a share card using [Canva](http://canva.com/) or a similar tool
+* [ ] Set up general meta tags
+    ```html
+    <meta name="description" content="${SITE_NAME}" />
+    <meta name="author" content="${SITE_AUTHOR}" />
+    ```
+* [ ] Set up Facebook meta tags & validate [here](https://developers.facebook.com/tools/debug/)
+    ```html
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="${SITE_NAME}">
+    <meta property="og:description" content="${SITE_DESCRIPTION}">
+    <meta property="og:image" content="${SHARE_CARD_URL}">
+    <meta property="og:title" content="${PAGE_TITLE}">
+    <meta property="og:url" content="${PAGE_URL}">
+    ```
+* [ ] Set up Twitter meta tags & validate [here](https://cards-dev.twitter.com/validator)
+    ```html
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="${SITE_NAME}">
+    <meta name="twitter:creator" content="${SITE_AUTHOR}">
+    <meta name="twitter:description" content="${SITE_DESCRIPTION}">
+    <meta name="twitter:image" content="${SHARE_CARD_URL}">
+    <meta name="twitter:title" content="${PAGE_TITLE}">
+    <meta name="twitter:url" content="${PAGE_URL}">
+    ```
 
-## Mobile Friendliness
+## Miscellaneous Polish
 
-Test on various mobile devices:
-- [ ] scrolling is easy
-- [ ] nav bar works
-- [ ] hoverable things are tappable
-- [ ] charts/maps look ok
+* [ ] Add favicons and Apple touch icons (http://www.favicomatic.com/)
+* [ ] Add custom 404 & 500 error pages
+
+## Browser and mobile compatibility
+
+* [ ] Use BrowserStack to confirm that your site is compatible with the browsers you wish to support
+
+Using BrowserStack's mobile device emulators and/or your own mobile device, confirm that:
+
+* [ ] Scrolling is easy
+* [ ] Nav bar works
+* [ ] Hoverable things are tappable
+* [ ] Charts and maps look ok
 
 ## Printer Friendliness
 
-Dynamic sizing, dark backgrounds, and interactivity don't play well with printers. 
+Dynamic sizing, dark backgrounds, and interactivity don't play well with printers.
 
-Pick one: 
-- [ ] Make a print stylesheet using a `@media print {}` media query, then add it to your site with `<link rel="stylesheet" type="text/css" href="css/print.css" media="print">`
+Pick one:
+
+* [ ] Make a print stylesheet using a `@media print {}` media query, then add it to your site with `<link rel="stylesheet" type="text/css" href="css/print.css" media="print">`
+
 - or -
-- [ ] Use Firefox dev tools to remove offending elements (like sticky footers), alter colors where needed, and screenshot the entire page (here's how: https://stackoverflow.com/a/14830242).
-- [ ] Slice the resulting PNG into a multi-page PDF by copy/pasting page-sized chunks into the rich text editor of your choice, i.e. Microsoft Word or Google Docs. Export it to PDF and add it to the directory your images are stored in.
-- [ ] Add a link to the printer-friendly version to your website.
 
-## Page Speed
-- [ ] run the site through https://developers.google.com/speed/pagespeed/insights/
+* [ ] Use your browser's dev tools to remove offending elements (like sticky footers), alter colors where needed, and [screenshot the entire page](https://stackoverflow.com/a/14830242).
+* [ ] Add a link to the printer-friendly version to your website.
 
-## Miscellaneous Polish
-- [ ] add favicons, apple touch icons (http://www.favicomatic.com/)
-- [ ] add 404 & 500 error pages
-- [ ] setup HTTPS with [Let's Encrypt](https://letsencrypt.org/) or some other means.
+## GitHub README
 
-## Load Testing
-
-If your site relies on a database or server-side code, it should use caching and be load tested. If it's a static HTML or Jekyll site, you can skip this section.
-
-- [ ] set up page [caching](https://en.wikipedia.org/wiki/Web_cache)
-- [ ] write a script to load test all your pages. [Here's a good example from Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/cache_builder.py)
-
-## Testing
-
-- [ ] Plan for a day of bugfixing. This day should happen after you have added the last features you plan on adding.
-
-## GitHub Readme
-
-If the site is open source, make sure the Readme.md is complete and accurate. 
+If the site is open source, make sure the README.md is complete and accurate.
 
 Here's a few good examples:
 
-- [Geomancer](https://github.com/associatedpress/geomancer/blob/master/README.md)
+- [LA Metro Councilmatic](https://github.com/datamade/la-metro-councilmatic)
 - [Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/README.md)
 
-The Readme should have the following sections:
+The README should generally contain information on the following:
 
-- [ ] Overview
-- [ ] Setup
-- [ ] Running locally
-- [ ] Team
-- [ ] Errors / Bugs 
-- [ ] Pull Requests
-- [ ] Copyright and License
-
-## Outreach
-
-- [ ] Write up press release
-- [ ] Identify who will be the primary person of contact and make their info prominent on the website and all PR
-- [ ] Identify relevant media contacts to email
-- [ ] Identify relevant social news sites (reddit, listservs, slack channels)
-- [ ] Divide & conquer - send out the media blitz!
+* [ ] Project overview
+* [ ] System-level dependencies
+* [ ] Running locally
+* [ ] Bug reports and contributing
+* [ ] Copyright and license
 ```
 
-## Suggestions? 
+## Suggestions?
 
-We'd love to hear 'em. [Open an issue](https://github.com/datamade/site-launch-checklist/issues), or fork this repo and make it your own! 
+We'd love to hear 'em. [Open an issue](https://github.com/datamade/site-launch-checklist/issues), or fork this repo and make it your own!
 
 ## Copyright and Attribution
 
-Copyright (c) 2016 DataMade. Released under [MIT License](https://github.com/datamade/site-launch-checklist/blob/master/LICENSE).
+Copyright (c) 2021 DataMade. Released under [MIT License](https://github.com/datamade/site-launch-checklist/blob/master/LICENSE).
