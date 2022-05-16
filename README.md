@@ -38,9 +38,18 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 
 * [ ] Create a [Google Analytics](http://www.google.com/analytics/) account
 * [ ] Add [the Google Analytics script](https://developers.google.com/analytics/devguides/collection/analyticsjs) to your site
-* [ ] Set up [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en) and [verify site](https://support.google.com/webmasters/answer/9008080?hl=en)
-* [ ] Link Webmaster Tools to Google Analytics
+* [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site
 * [ ] Optional: Set up relevant Goals and Funnels in Google Analytics
+
+## Accessibility
+
+* [ ] Overview - test all pages with a tool like [Axe DevTools](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) or [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+* [ ] Keyboard - confirm all functionality works with a keyboard _only_. This includes logical focus order (typically left-right top-down) and no focus traps (except modals)
+* [ ] Screen Reader - test pages with a screen reader like [NVDA](https://www.nvaccess.org/download/) on Windows or [VoiceOver on Mac](https://support.apple.com/guide/voiceover/turn-voiceover-on-or-off-vo2682/mac), confirming that all content is clear, including:
+  * [ ] Confirm no repeat or unclear button titles (e.g. "Click here" or "View more")
+  * [ ] Confirm images have proper alt tags for their context (including `alt=""` for decorative images)
+* [ ] Structure - Using [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni) or another tool, confirm all pages have clear and sufficient heading levels. Keep in mind it should act like a table of contents, you want to have enough headings to be useful but not one for every paragraph.
+* [ ] Color Blindness - make sure no information is conveyed via color only, potentially by testing using grayscale mode in [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
 
 ## Sharing & Rich Snippets
 
