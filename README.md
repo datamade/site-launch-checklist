@@ -79,6 +79,8 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
     <meta name="twitter:url" content="${PAGE_URL}">
     ```
 
+Confirm your meta tags work by checking on https://metatags.io
+
 ## Miscellaneous Polish
 
 * [ ] Add favicons and Apple touch icons (http://www.favicomatic.com/)
