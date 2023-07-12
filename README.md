@@ -29,17 +29,15 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 
 ## Web Search Indexing
 
-* [ ] Disallow indexing of your staging site
-* [ ] Allow indexing of your production site
+* [ ] Create a [robots.txt](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) file that disallows indexing of your staging site and allow indexing of your production site
+* [ ] Create a [sitemap.xml](https://en.wikipedia.org/wiki/Sitemaps) that lists all pages on your site that you want indexed
 * [ ] Redirect the www subdomain to your root domain
-* [ ] [Set a canonical URL](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls) to prevent duplicate search results
-
-## Google Analytics
-
-* [ ] Create a [Google Analytics](http://www.google.com/analytics/) account
-* [ ] Add [the Google Analytics script](https://developers.google.com/analytics/devguides/collection/analyticsjs) to your site
 * [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site
-* [ ] Optional: Set up relevant Goals and Funnels in Google Analytics
+
+## Tracking Site Traffic and Analytics
+
+* [ ] Create a [Matomo](https://matomo.org/) account
+* [ ] [Add the Matomo script to your site](https://developer.matomo.org/guides/tracking-javascript-guide)
 
 ## Accessibility
 
