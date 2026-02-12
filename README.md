@@ -14,7 +14,7 @@ From the [DataMade Site Launch Checklist](https://github.com/datamade/site-launc
 If your site relies on a database or server-side code, you should load test and optimize the site for the level of traffic you anticipate. If you're launching a static site, you can skip this section.
 
 * [ ] Set up [caching](https://docs.djangoproject.com/en/stable/topics/cache/)
-* [ ] Run the site through Google's [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+* [ ] Run the site through [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 * [ ] Write a script to load test your site
     - We like [Locust](https://docs.locust.io/en/stable/) for this. See [LA Metro Councilmatic](https://github.com/datamade/la-metro-councilmatic#load-testing) for a basic example.
 
@@ -25,19 +25,21 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 * [ ] Create a production deployment
 * [ ] Double check that production-level resources have been provisioned
 * [ ] Purchase your domain and create the DNS record to point it at your production deployment
-* [ ] Set up SSL
+* [ ] If you are using [Cloudflare](https://www.cloudflare.com/) (you should!), set up the domain to point to the Cloudflare nameservers and configure the DNS records on Cloudflare
+* [ ] Set up SSL if needed (on services like Heroku and Netlify, this will be automatic)
 
 ## Web Search Indexing
 
 * [ ] Create a [robots.txt](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) file that disallows indexing of your staging site and allow indexing of your production site
 * [ ] Create a [sitemap.xml](https://en.wikipedia.org/wiki/Sitemaps) that lists all pages on your site that you want indexed
-* [ ] Redirect the www subdomain to your root domain
-* [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site
+* [ ] If using a root domain for your URL, set DNS records to redirect the www subdomain to your root domain
+* [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site and optionally submit your sitemap
 
 ## Tracking Site Traffic and Analytics
 
-* [ ] Create a [Matomo](https://matomo.org/) account
-* [ ] [Add the Matomo script to your site](https://developer.matomo.org/guides/tracking-javascript-guide)
+If you are using Cloudflare, you will get their [Web Analytics](https://www.cloudflare.com/web-analytics/) as part of that service.
+
+* [ ] Optionally, create a [Google Analytics](https://analytics.google.com/) account and add the javascript code to your site
 
 ## Accessibility
 
@@ -66,18 +68,8 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
     <meta property="og:title" content="${PAGE_TITLE}">
     <meta property="og:url" content="${PAGE_URL}">
     ```
-* [ ] Set up Twitter meta tags & validate [here](https://cards-dev.twitter.com/validator)
-    ```html
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="${SITE_NAME}">
-    <meta name="twitter:creator" content="${SITE_AUTHOR}">
-    <meta name="twitter:description" content="${SITE_DESCRIPTION}">
-    <meta name="twitter:image" content="${SHARE_CARD_URL}">
-    <meta name="twitter:title" content="${PAGE_TITLE}">
-    <meta name="twitter:url" content="${PAGE_URL}">
-    ```
 
-Confirm your meta tags work by checking on https://metatags.io
+Confirm your meta tags work by checking on [https://metatags.io](metatags.io)
 
 ## Miscellaneous Polish
 
@@ -115,7 +107,7 @@ If the site is open source, make sure the README.md is complete and accurate.
 Here's a few good examples:
 
 - [LA Metro Councilmatic](https://github.com/datamade/la-metro-councilmatic)
-- [Illinois Sunshine](https://github.com/datamade/illinois-sunshine/blob/master/README.md)
+- [Parserator]([https://github.com/datamade/illinois-sunshine/blob/master/README.md](https://github.com/datamade/usaddress/blob/main/README.md))
 
 The README should generally contain information on the following:
 
@@ -132,4 +124,4 @@ We'd love to hear 'em. [Open an issue](https://github.com/datamade/site-launch-c
 
 ## Copyright and Attribution
 
-Copyright (c) 2021 DataMade. Released under [MIT License](https://github.com/datamade/site-launch-checklist/blob/master/LICENSE).
+Copyright (c) 2026 DataMade. Released under [MIT License](https://github.com/datamade/site-launch-checklist/blob/master/LICENSE).
