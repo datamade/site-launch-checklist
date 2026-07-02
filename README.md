@@ -39,7 +39,8 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 
 If you are using Cloudflare, you will get their [Web Analytics](https://www.cloudflare.com/web-analytics/) as part of that service.
 
-* [ ] Optionally, create a [Google Analytics](https://analytics.google.com/) account and add the javascript code to your site
+* [ ] Option 1: Create a [Matomo](https://matomo.org/) account and [add the Matomo Tag Manager script to your site]([https://developer.matomo.org/guides/tracking-javascript-guide](https://developer.matomo.org/guides/tagmanager/embedding))
+* [ ] Option 2: Create a [Google Analytics](https://analytics.google.com/) account and add the javascript code to your site
 
 ## Accessibility
 
