@@ -6,7 +6,7 @@ Launch preparation generally takes a day or more. You should also reserve a day 
 
 Once you're ready, make a new GitHub issue in your project called "Launch Checklist" and copy/paste the following:
 
-```
+````
 From the [DataMade Site Launch Checklist](https://github.com/datamade/site-launch-checklist)
 
 ## Load Testing and Website Optimization
@@ -24,23 +24,23 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 
 * [ ] Create a production deployment
 * [ ] Double check that production-level resources have been provisioned
-* [ ] Purchase your domain and create the DNS record to point it at your production deployment
-* [ ] If you are using [Cloudflare](https://www.cloudflare.com/) (you should!), set up the domain to point to the Cloudflare nameservers and configure the DNS records on Cloudflare
+* [ ] Decide on a domain or subdomain and purchase if necessary
+* [ ] Create DNS records to point it at your production deployment
 * [ ] Set up SSL if needed (on services like Heroku and Netlify, this will be automatic)
+* [ ] If you are using [Cloudflare](https://www.cloudflare.com/) (you should!), set up the domain to point to the Cloudflare nameservers and configure the DNS records on Cloudflare
 
 ## Web Search Indexing
 
-* [ ] Create a [robots.txt](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) file that disallows indexing of your staging site and allow indexing of your production site
+* [ ] Create a [robots.txt](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) file that disallows indexing of your staging site and allows indexing of your production site
 * [ ] Create a [sitemap.xml](https://en.wikipedia.org/wiki/Sitemaps) that lists all pages on your site that you want indexed
 * [ ] If using a root domain for your URL, set DNS records to redirect the www subdomain to your root domain
 * [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site and optionally submit your sitemap
 
 ## Tracking Site Traffic and Analytics
 
-If you are using Cloudflare, you will get their [Web Analytics](https://www.cloudflare.com/web-analytics/) as part of that service.
-
-* [ ] Option 1: Create a [Matomo](https://matomo.org/) account and [add the Matomo Tag Manager script to your site]([https://developer.matomo.org/guides/tracking-javascript-guide](https://developer.matomo.org/guides/tagmanager/embedding))
+* [ ] Option 1: Create a [Matomo](https://matomo.org/) account and [add the Matomo Tag Manager script to your site](https://developer.matomo.org/guides/tagmanager/embedding)
 * [ ] Option 2: Create a [Google Analytics](https://analytics.google.com/) account and add the javascript code to your site
+* [ ] Option 3: If you are using Cloudflare, you will get their [Web Analytics](https://www.cloudflare.com/web-analytics/) as part of that service, though it does not track sessions and goals like the above services do.
 
 ## Accessibility
 
@@ -52,32 +52,39 @@ If you are using Cloudflare, you will get their [Web Analytics](https://www.clou
 * [ ] Structure - Using [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni) or another tool, confirm all pages have clear and sufficient heading levels. Keep in mind it should act like a table of contents, you want to have enough headings to be useful but not one for every paragraph.
 * [ ] Color Blindness - make sure no information is conveyed via color only, potentially by testing using grayscale mode in [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
 
-## Sharing & Rich Snippets
+## Sharing & Metadata
 
-* [ ] Create a share card using [Canva](http://canva.com/) or a similar tool
+* [ ] Create a share card using [Canva](https://canva.com/) or a similar tool
 * [ ] Set up general meta tags
-    ```html
-    <meta name="description" content="${SITE_NAME}" />
-    <meta name="author" content="${SITE_AUTHOR}" />
-    ```
-* [ ] Set up Facebook meta tags & validate [here](https://developers.facebook.com/tools/debug/)
-    ```html
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="${SITE_NAME}">
-    <meta property="og:description" content="${SITE_DESCRIPTION}">
-    <meta property="og:image" content="${SHARE_CARD_URL}">
-    <meta property="og:title" content="${PAGE_TITLE}">
-    <meta property="og:url" content="${PAGE_URL}">
-    ```
+* [ ] Confirm your meta tags work by checking on [metatags.io](https://metatags.io)
 
-Confirm your meta tags work by checking on [https://metatags.io](metatags.io)
+```html
+<!-- Primary Meta Tags -->
+<title>TITLE</title>
+<meta name="title" content="TITLE" />
+<meta name="description" content="DESCRIPTION" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="URL" />
+<meta property="og:title" content="TITLE" />
+<meta property="og:description" content="DESCRIPTION" />
+<meta property="og:image" content="PREVIEW_IMAGE_URL" />
+
+<!-- X (Twitter) -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="URL" />
+<meta property="twitter:title" content="TITLE" />
+<meta property="twitter:description" content="DESCRIPTION" />
+<meta property="twitter:image" content="PREVIEW_IMAGE_URL" />
+```
 
 ## Miscellaneous Polish
 
-* [ ] Add favicons and Apple touch icons (http://www.favicomatic.com/)
+* [ ] Add favicons and Apple touch icons (https://www.favicomatic.com/)
 * [ ] Add custom 404 & 500 error pages
 
-## Browser and mobile compatibility
+## Browser and Mobile Compatibility
 
 * [ ] Use BrowserStack to confirm that your site is compatible with the browsers you wish to support
 
@@ -105,10 +112,10 @@ Pick one:
 
 If the site is open source, make sure the README.md is complete and accurate.
 
-Here's a few good examples:
+Here are a few good examples:
 
 - [LA Metro Councilmatic](https://github.com/datamade/la-metro-councilmatic)
-- [Parserator]([https://github.com/datamade/illinois-sunshine/blob/master/README.md](https://github.com/datamade/usaddress/blob/main/README.md))
+- [usaddress](https://github.com/datamade/usaddress/blob/main/README.md)
 
 The README should generally contain information on the following:
 
@@ -117,7 +124,7 @@ The README should generally contain information on the following:
 * [ ] Running locally
 * [ ] Bug reports and contributing
 * [ ] Copyright and license
-```
+````
 
 ## Suggestions?
 
