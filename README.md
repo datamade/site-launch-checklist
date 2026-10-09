@@ -57,6 +57,7 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 * [ ] Create a share card using [Canva](https://canva.com/) or a similar tool
 * [ ] Set up general meta tags
 * [ ] Confirm your meta tags work by checking on [metatags.io](https://metatags.io)
+* [ ] Check Open Graph tags and image URLs on a page from each template (e.g. homepage, project page and blog post) with [ShareScan](https://sharescan.io/scan) (up to 10 pages, free, no account required)
 
 ```html
 <!-- Primary Meta Tags -->
