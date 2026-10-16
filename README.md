@@ -33,7 +33,7 @@ If you're writing a Django application, [Django Debug Toolbar](https://django-de
 
 * [ ] Create a [robots.txt](https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt) file that disallows indexing of your staging site and allows indexing of your production site
 * [ ] Create a [sitemap.xml](https://en.wikipedia.org/wiki/Sitemaps) that lists all pages on your site that you want indexed
-* [ ] If using a root domain for your URL, set DNS records to redirect the www subdomain to your root domain
+* [ ] If using a root domain for your URL, configure an [HTTP redirect](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections) from the www subdomain to your root domain using your web server or hosting provider
 * [ ] Set up [Google Search Console](https://search.google.com/search-console) and verify the site and optionally submit your sitemap
 
 ## Tracking Site Traffic and Analytics
